@@ -19,7 +19,7 @@ export class RegistrationComponent {
   }
 
   register(username: string, password:string, nickname:string) {
-    //console.log(username + " " +  password + " " + nickname)
+
     if (!username || !password  || !nickname) {
       return;
     }else{

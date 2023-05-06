@@ -11,7 +11,7 @@ export class ChatComponent {
   private socket: any;
   messages: string[] = [];
   newMessage: string = '';
-  nickname: string = ''; // Add this property for the user's nickname
+  nickname: string = ''; 
 
   constructor() {
     this.socket = io('http://localhost:8080');
@@ -19,7 +19,6 @@ export class ChatComponent {
       this.messages.push(data);
     });
 
-    // Retrieve the user's nickname from local storage or login component (modify as needed)
     this.nickname = localStorage.getItem('nickname') || ''; 
   }
 

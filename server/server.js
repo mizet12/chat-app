@@ -9,7 +9,6 @@ const io = require('socket.io')(server, {
     methods: ['GET', 'POST']
   }
 });
-//aaaaaaa
 
 
 
@@ -39,7 +38,7 @@ io.on('connection', (socket) => {
 
   socket.on('message', (data) => {
     console.log('Received message:', data);
-    io.emit('message', data); // Broadcast the message to all connected clients
+    io.emit('message', data); 
   });
   socket.on('register', (registerData) =>{
     console.log("AAAAA")

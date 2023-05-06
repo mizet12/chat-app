@@ -28,11 +28,11 @@ export class LoginComponent {
     this.http.post<any>('http://localhost:8080/login', credentials, httpOptions)
       .subscribe(
         response => {
-          // Successful login logic
+
           console.log('Login successful');
         },
         error => {
-          // Error handling logic
+
           console.log('Login failed', error);
         }
       );
