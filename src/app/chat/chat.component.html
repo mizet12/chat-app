@@ -1,0 +1,13 @@
+<h2>Welcome to the Chat</h2>
+<p>Nickname: {{ nickname }}</p>
+
+<div>
+  <ul>
+    <li *ngFor="let message of messages">{{ message }}</li>
+  </ul>
+</div>
+
+<div>
+  <input [(ngModel)]="newMessage" name="newMessage" placeholder="Type a message..." (keyup.enter)="sendMessage()">
+  <button (click)="sendMessage()">Send</button>
+</div>
